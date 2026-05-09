@@ -31,6 +31,12 @@ Creare il pacchetto JAR:
 mvn clean package
 ```
 
+Eseguire il JAR generato:
+
+```bash
+java -jar target/pacspanz-1.0.0.jar
+```
+
 Eseguire il gioco tramite Maven:
 
 ```bash
