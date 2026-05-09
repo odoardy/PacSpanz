@@ -29,7 +29,6 @@ public final class AssetLoader {
         for (String resourcePath : resourcePaths) {
             BufferedImage image = loadImage(resourcePath);
             if (image != null) {
-                System.out.println("Caricato " + loadedLabel + ": " + resourcePath);
                 return new LoadedImage(image);
             }
         }
@@ -72,7 +71,6 @@ public final class AssetLoader {
             }
 
             Font font = Font.createFont(Font.TRUETYPE_FONT, stream);
-            System.out.println("Font arcade caricato: " + resourcePath);
             return font;
         } catch (IOException | FontFormatException | IllegalArgumentException ex) {
             System.out.println("Font arcade non caricato, uso il carattere sostitutivo");
