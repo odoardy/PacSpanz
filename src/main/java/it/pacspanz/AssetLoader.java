@@ -11,7 +11,7 @@ public final class AssetLoader {
     private AssetLoader() {
     }
 
-    public record LoadedImage(BufferedImage image, String resourcePath) {
+    public record LoadedImage(BufferedImage image) {
     }
 
     public static BufferedImage loadImage(String resourcePath) {
@@ -30,7 +30,7 @@ public final class AssetLoader {
             BufferedImage image = loadImage(resourcePath);
             if (image != null) {
                 System.out.println("Caricato " + loadedLabel + ": " + resourcePath);
-                return new LoadedImage(image, resourcePath);
+                return new LoadedImage(image);
             }
         }
 
